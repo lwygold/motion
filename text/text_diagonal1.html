@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin:0;
+        padding:0;
+    }    
+
+    .text__wrap {
+        position: relative;
+        width: 85rem;
+        margin: 0 0 6rem;
+    }
+
+    .inner {
+        position: relative;
+    }
+
+    h1 {
+        position: absolute;
+        font-style: normal;
+        font-weight: 320;
+        font-size: 6rem;
+        line-height: 100%;
+        letter-spacing: -.04rem;
+        color: #fff;
+        transform: translateZ(0);
+        bottom: 30vh;
+        left: 10%;
+    }
+
+    .video1 {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        position: relative;
+        top: -40px;
+    }
+
+    .text__box,
+    .text__box2 {
+        position: relative;
+        display: inline-block;
+        margin: -0.15em;
+        padding: 0.15em;
+        vertical-align: top;
+        overflow: hidden;
+    }
+
+    .text__box__word {
+        position: relative;
+        display: inline-block;
+        margin: -0.15em;
+        padding: 0.15em;
+        letter-spacing: -0.05em;
+        vertical-align: top;
+        overflow: hidden;
+        translate: none;
+        rotate: none;
+        scale: none;
+        transform: translate(0px, 110%) rotate(45deg);
+        will-change: auto;  
+        transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);      
+    }   
+
+    .text__box .text__box__word {
+        transition-delay: 0.06s;
+    }
+
+    .text__box2 .text__box__word {
+        transition-delay: 0.2s;
+    }
+
+    .active .text__box__word {
+        transform: translate(0px, 0) rotate(0);
+    }
+    
+</style>
+
+<body>
+    <video class="video1" src="../assets/images/magma_video1.mp4" preload="auto" autoplay="" loop="" muted="" playsinline="" style="will-change: transform; translate: none; rotate: none; scale: none; transform: translate3d(0px, 3.0675%, 0px); opacity: 1;"></video>
+    <div class="inner">
+        <div class="text__wrap">
+            <h1>
+                <div class="text__box">
+                    <div class="text__box__word">E</div>
+                    <div class="text__box__word">x</div>
+                    <div class="text__box__word">p</div>
+                    <div class="text__box__word">e</div>
+                    <div class="text__box__word">r</div>
+                    <div class="text__box__word">i</div>
+                    <div class="text__box__word">e</div>
+                    <div class="text__box__word">n</div>
+                    <div class="text__box__word">c</div>
+                    <div class="text__box__word">e</div>
+                </div>
+                <div class="text__box">
+                    <div class="text__box__word">R</div>
+                    <div class="text__box__word">e</div>
+                    <div class="text__box__word">a</div>
+                    <div class="text__box__word">l</div>
+                </div>
+                <br/>
+                <div class="text__box2">
+                    <div class="text__box__word">E</div>
+                    <div class="text__box__word">s</div>
+                    <div class="text__box__word">t</div>
+                    <div class="text__box__word">a</div>
+                    <div class="text__box__word">t</div>
+                    <div class="text__box__word">e</div>
+                </div>
+                <div class="text__box2">
+                    <div class="text__box__word">A</div>
+                    <div class="text__box__word">g</div>
+                    <div class="text__box__word">i</div>
+                    <div class="text__box__word">l</div>
+                    <div class="text__box__word">i</div>
+                    <div class="text__box__word">t</div>
+                    <div class="text__box__word">y</div>
+                </div>
+            </h1>
+        </div>
+    </div>
+</body>
+
+<script>        
+    window.onload = function(){
+        const text_h1 = document.querySelector('h1');        
+        text_h1.classList.add('active');        
+    }        
+</script>
+
+</html>
