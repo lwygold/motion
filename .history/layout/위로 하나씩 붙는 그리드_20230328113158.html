@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, target-densitydpi=medium-dpi" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="x-rim-auto-match" content="none" />
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/sub.css" /> -->
+    <title>테스트</title>
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/gsap.js"></script>
+    <script src="../assets/js/gsap_scroll_trigger.js"></script>
+    <script src="../assets/js/green.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/sub.js"></script>
+</head>
+
+<style>
+    section {
+        max-width: 100%;
+        padding: 0 2%;
+        box-sizing: border-box;
+    }
+
+    section.top {
+        width: 100vw;
+        height: 100vh;
+        background: red;
+    }
+
+    section.bottom {
+        width: 100vw;
+        height: 100vh;
+        background: blue;
+    }
+
+    h2 {
+        font-size: 5vw;
+        text-align: center;
+        margin: 5vw 0;
+    }
+
+    .grid__wrap {
+        padding: 5vw 0;        
+    }
+
+    .grid {        
+        border: 1px solid #000;
+        box-sizing: border-box;        
+    }
+
+    .grid__li1 {
+        border-top: 1px solid #000;
+        display: grid;
+        grid-template-columns: repeat(24, minmax(0, 1fr));
+        grid-template-rows: min-content minmax(0, 1fr);
+        background: #fff;
+    }
+
+    .grid__li1>div:first-child {
+        border-right: 1px solid #000;
+        grid-column-start: 1;
+        grid-column-end: 6;
+        box-sizing: border-box;
+        padding: 1vw;
+    }
+
+    .grid__li1>div:nth-child(2) {
+        border-right: 1px solid #000;
+        grid-column-start: 6;
+        grid-column-end: 18;
+        box-sizing: border-box;
+    }
+
+    .grid__li1>div:nth-child(3) {
+        grid-column-start: 18;
+        grid-column-end: 25;
+    }
+
+    .grid__li1>div:first-child span {
+        font-size: 3.3vw;
+        font-weight: 300;
+        transform: scale(3.3);
+        transform-origin: top left;
+        display: inline-block;
+        letter-spacing: -0.1em;
+    }
+
+    .grid__li1>div:nth-child(2) h3 {
+        font-size: 2vw;
+        line-height: 1.5;
+        color: #000;
+        padding: 1.3vw 1vw;
+    }
+
+    .grid__li1>div:nth-child(2)>p {
+        font-size: 0.9vw;
+        color: #000;
+        margin-bottom: 1.3vw;
+        line-height: 1.5;
+        padding: 0 1vw;
+    }
+
+    .grid__li1>div:nth-child(2)>div>p {
+        font-size: 1vw;
+        line-height: 1.5;
+        color: #000;
+        margin-bottom: 1.3vw;
+        padding: 0 1vw;
+    }
+
+    .grid__li1>div:nth-child(3) img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
+<body>
+
+    <section class="top"></section>
+    <section class="start">
+
+        <div>
+            <h2>start</h2>
+            <div class="grid__wrap">
+                <ul class="grid">
+                    <li class="grid__li1">
+                        <div>
+                            <span>01.</span>
+                        </div>
+                        <div>
+                            <h3>
+                                Votre accompagnement sur mesure
+                            </h3>
+                            <p>
+                                Vous avez besoin d’un accompagnement personnalisé pour définir vos besoins ?
+                                Que vous soyez à la recherche d’une combinaison, robe de soirée, robe de demoiselle
+                                d’honneur ou encore robe de gala sur-mesure, nous sommes là pour concevoir ensemble une
+                                tenue unique, qui vous ressemble et sublime votre silhouette.
+                            </p>
+                            <div>
+                                <p>Vous pouvez nous contacter directement et prendre rendez-vous depuis notre page
+                                    “Contact”. Confortablement installée chez vous, nous vous proposons un appel
+                                    téléphonique ou bien une visio. Bénéficiez de conseils personnalisés et sur-mesure.
+                                    Nous définissons ensemble vos attentes et créer ensemble la pièce qui vous
+                                    correspond à 100%.</p>
+                                <p>Vous avez des questions ? Consultez la page FAQ mise à votre disposition et
+                                    retrouvez-y toutes les informations utiles.</p>
+                                <p>Besoin d’une réponse rapide? Contactez nous directement via Whatsapp.</p>
+                                <p> Nous sommes ravis de vous accompagner et de vous guider dans la création de votre
+                                    tenue sur-mesure.11</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./images/11.png" alt="">
+                        </div>
+                    </li>
+                    <li class="grid__li1">
+                        <div>
+                            <span>02.</span>
+                        </div>
+                        <div>
+                            <h3>
+                                Votre accompagnement sur mesure
+                            </h3>
+                            <p>
+                                Vous avez besoin d’un accompagnement personnalisé pour définir vos besoins ?
+                                Que vous soyez à la recherche d’une combinaison, robe de soirée, robe de demoiselle
+                                d’honneur ou encore robe de gala sur-mesure, nous sommes là pour concevoir ensemble une
+                                tenue unique, qui vous ressemble et sublime votre silhouette.
+                            </p>
+                            <div>
+                                <p>Vous pouvez nous contacter directement et prendre rendez-vous depuis notre page
+                                    “Contact”. Confortablement installée chez vous, nous vous proposons un appel
+                                    téléphonique ou bien une visio. Bénéficiez de conseils personnalisés et sur-mesure.
+                                    Nous définissons ensemble vos attentes et créer ensemble la pièce qui vous
+                                    correspond à 100%.</p>
+                                <p>Vous avez des questions ? Consultez la page FAQ mise à votre disposition et
+                                    retrouvez-y toutes les informations utiles.</p>
+                                <p>Besoin d’une réponse rapide? Contactez nous directement via Whatsapp.</p>
+                                <p> Nous sommes ravis de vous accompagner et de vous guider dans la création de votre
+                                    tenue sur-mesure.11</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./images/22.png" alt="">
+                        </div>
+                    </li>
+                    <li class="grid__li1">
+                        <div>
+                            <span>03.</span>
+                        </div>
+                        <div>
+                            <h3>
+                                Votre accompagnement sur mesure
+                            </h3>
+                            <p>
+                                Vous avez besoin d’un accompagnement personnalisé pour définir vos besoins ?
+                                Que vous soyez à la recherche d’une combinaison, robe de soirée, robe de demoiselle
+                                d’honneur ou encore robe de gala sur-mesure, nous sommes là pour concevoir ensemble une
+                                tenue unique, qui vous ressemble et sublime votre silhouette.
+                            </p>
+                            <div>
+                                <p>Vous pouvez nous contacter directement et prendre rendez-vous depuis notre page
+                                    “Contact”. Confortablement installée chez vous, nous vous proposons un appel
+                                    téléphonique ou bien une visio. Bénéficiez de conseils personnalisés et sur-mesure.
+                                    Nous définissons ensemble vos attentes et créer ensemble la pièce qui vous
+                                    correspond à 100%.</p>
+                                <p>Vous avez des questions ? Consultez la page FAQ mise à votre disposition et
+                                    retrouvez-y toutes les informations utiles.</p>
+                                <p>Besoin d’une réponse rapide? Contactez nous directement via Whatsapp.</p>
+                                <p> Nous sommes ravis de vous accompagner et de vous guider dans la création de votre
+                                    tenue sur-mesure.11</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./images/33.png" alt="">
+                        </div>
+                    </li>
+                    <li class="grid__li1">
+                        <div>
+                            <span>04.</span>
+                        </div>
+                        <div>
+                            <h3>
+                                Votre accompagnement sur mesure
+                            </h3>
+                            <p>
+                                Vous avez besoin d’un accompagnement personnalisé pour définir vos besoins ?
+                                Que vous soyez à la recherche d’une combinaison, robe de soirée, robe de demoiselle
+                                d’honneur ou encore robe de gala sur-mesure, nous sommes là pour concevoir ensemble une
+                                tenue unique, qui vous ressemble et sublime votre silhouette.
+                            </p>
+                            <div>
+                                <p>Vous pouvez nous contacter directement et prendre rendez-vous depuis notre page
+                                    “Contact”. Confortablement installée chez vous, nous vous proposons un appel
+                                    téléphonique ou bien une visio. Bénéficiez de conseils personnalisés et sur-mesure.
+                                    Nous définissons ensemble vos attentes et créer ensemble la pièce qui vous
+                                    correspond à 100%.</p>
+                                <p>Vous avez des questions ? Consultez la page FAQ mise à votre disposition et
+                                    retrouvez-y toutes les informations utiles.</p>
+                                <p>Besoin d’une réponse rapide? Contactez nous directement via Whatsapp.</p>
+                                <p> Nous sommes ravis de vous accompagner et de vous guider dans la création de votre
+                                    tenue sur-mesure.11</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./images/44.png" alt="">
+                        </div>
+                    </li>
+                    <li class="grid__li1">
+                        <div>
+                            <span>05.</span>
+                        </div>
+                        <div>
+                            <h3>
+                                Votre accompagnement sur mesure
+                            </h3>
+                            <p>
+                                Vous avez besoin d’un accompagnement personnalisé pour définir vos besoins ?
+                                Que vous soyez à la recherche d’une combinaison, robe de soirée, robe de demoiselle
+                                d’honneur ou encore robe de gala sur-mesure, nous sommes là pour concevoir ensemble une
+                                tenue unique, qui vous ressemble et sublime votre silhouette.
+                            </p>
+                            <div>
+                                <p>Vous pouvez nous contacter directement et prendre rendez-vous depuis notre page
+                                    “Contact”. Confortablement installée chez vous, nous vous proposons un appel
+                                    téléphonique ou bien une visio. Bénéficiez de conseils personnalisés et sur-mesure.
+                                    Nous définissons ensemble vos attentes et créer ensemble la pièce qui vous
+                                    correspond à 100%.</p>
+                                <p>Vous avez des questions ? Consultez la page FAQ mise à votre disposition et
+                                    retrouvez-y toutes les informations utiles.</p>
+                                <p>Besoin d’une réponse rapide? Contactez nous directement via Whatsapp.</p>
+                                <p> Nous sommes ravis de vous accompagner et de vous guider dans la création de votre
+                                    tenue sur-mesure.11</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./images/55.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+    <section class="bottom"></section>
+
+
+
+
+
+    <script>
+
+        $(function () {
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            const h1 = $('.grid__li1>div:nth-child(2) h3').outerHeight();
+            const panels = gsap.utils.toArray(".grid__li1");
+            const panels2 = gsap.utils.toArray(".grid__li1 span");
+            let panels_cnt = $('.grid__li1').length;
+            const h2 = $('.grid__li1').outerHeight();            
+            const t1 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '.grid__wrap',
+                    start: "top top",       
+                    end: "bottom",             
+                    pin: true,
+                    pinSpacing: false,
+                    scrub: true,
+                    markers: true,
+                }
+            });            
+
+            
+
+            panels.forEach((panel, i, p) => {     
+
+                if(i!=panels_cnt){
+                    t1.to(p[i+1],{
+                        y: -(h2*(i+1))-(h1*(i+1)-(h1*2)),
+                    })        
+                    .to(panels2[i+1],{
+                        transform: "scale(1)"
+                    });    
+                } else {
+                    t1.to(p[i],{
+                        y: -(h2*(i+1))-(h1*(i+1)-(h1*2)),
+                    })        
+                    .to(panels2[i],{
+                        transform: "scale(1)"
+                    });    
+                }
+                                
+
+            });
+            
+
+                                        
+            
+
+            
+
+
+
+
+
+        });
+
+    </script>
+</body>
+
+</html>

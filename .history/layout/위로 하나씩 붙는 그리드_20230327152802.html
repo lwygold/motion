@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, target-densitydpi=medium-dpi" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="x-rim-auto-match" content="none" />
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/sub.css" />
+    <title>테스트</title>
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/gsap.js"></script>
+    <script src="../assets/js/gsap_scroll_trigger.js"></script>
+    <script src="../assets/js/green.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/sub.js"></script>
+</head>
+
+<style>
+
+    :root {
+        --color-green: #174036;
+        --color-green-light: #cce3de;
+        --color-green-medium: #52796f;
+        --color-beige: #ffe7d6;
+        --color-beige-light: #fffcf7
+    }
+
+    .origin-top-left {
+        transform-origin: top left;
+    }
+    .inline-block {
+        display: inline-block;
+    }
+    .title-paganini, .title-paganini-small {
+        font-family: paganini,serif;
+        font-weight: 300;
+    }
+    .title-paganini {
+        font-size: 32px;
+        font-size: var(--text-48);
+        letter-spacing: -2px;
+        letter-spacing: calc(var(--size-2)*-1);
+        line-height: 115%;
+    }
+
+    .sticky {
+        position: -webkit-sticky;
+        position: sticky;
+    }
+
+
+    .w-full {
+        width: 100%;
+    }
+    .grid {
+        display: grid;
+    }
+
+    .xl\:grid-cols-24 {
+        grid-template-columns: repeat(24,minmax(0,1fr));
+    }
+    .bg-beige-light {
+        background-color: #fffcf7;
+        background-color: var(--color-beige-light);
+    }
+    .border-green {
+        border-color: #174036;
+        border-color: var(--color-green);
+    }
+    .border-t-\[1px\] {
+        border-top-width: 1px;
+    }
+    .border-x-\[1px\] {
+        border-left-width: 1px;
+        border-right-width: 1px;
+    }
+
+    
+</style>
+
+<body>
+
+
+    <div class="pt-container h-full sticky top-0" style="height: 1245px;">
+        <div class="step-cards-child">
+            <div class="grid grid-col-12 xl:grid-cols-24 grid-rows-[min-content_minmax(0,_1fr)] w-full border-x-[1px] border-t-[1px] last:border-b-[1px] border-green bg-beige-light step-card"
+                style="height: 733px;">
+                <div
+                    class="col-start-3 col-end-4 xl:col-start-1 xl:col-end-6 xl:row-span-2 xl:border-r-px xl:border-green pt-30 pl-30 xl:pr-20 xl:pl-20">
+                    <span class="title-paganini step-card-index origin-top-left inline-block"
+                        style="transform: scale(3, 3);">01.</span>
+                </div>
+                <div class="w-full col-start-4 col-end-13 xl:col-start-6 xl:col-end-[18]">
+                    <h3 class="title-paganini xl:pl-[8.62%] xl:pr-[4%] pt-30 pb-20 step-card-title">Votre accompagnement
+                        sur mesure </h3>
+                </div>
+                <div class="col-start-3 col-end-13 xl:col-start-6 xl:col-end-[18] mb-20 xl:mb-0">
+                    <div class="text-animation text-expanded px-30 xl:pl-[8.62%] xl:pr-[17.24%] text-14 text-green"
+                        style="opacity: 1;">
+                        <p><strong>Vous avez besoin d’un accompagnement personnalisé pour définir vos besoins ?<br>
+                                Que vous soyez à la recherche d’une combinaison, robe de soirée, robe de demoiselle
+                                d’honneur ou encore robe de gala sur-mesure, nous sommes là pour concevoir ensemble une
+                                tenue unique, qui vous ressemble et sublime votre silhouette.&nbsp;</strong></p>
+                        <p><span style="font-weight: 400;">Vous pouvez nous contacter directement et prendre rendez-vous
+                                depuis notre</span><span style="text-decoration: underline;"><a
+                                    href="https://that-original.com/contact/"> <span style="font-weight: 400;">page
+                                        “Contact”</span></a></span><span style="font-weight: 400;">.</span><span
+                                style="font-weight: 400;"> Confortablement installée chez vous</span><span
+                                style="font-weight: 400;">, nous vous proposons un appel téléphonique ou bien une visio.
+                                Bénéficiez de conseils personnalisés et sur-mesure. Nous définissons ensemble vos
+                                attentes et créer ensemble la pièce qui vous correspond à 100%.&nbsp;</span></p>
+                        <p><i><span style="font-weight: 400;">Vous avez des questions ? Consultez la</span></i><span
+                                style="text-decoration: underline;"><a href="https://that-original.com/faq/"> <i><span
+                                            style="font-weight: 400;">page FAQ</span></i></a></span><i><span
+                                    style="font-weight: 400;"> mise à votre disposition et retrouvez-y toutes les
+                                    informations utiles.</span></i></p>
+                        <p><i><span style="font-weight: 400;">Besoin d’une réponse rapide? Contactez nous directement
+                                    via Whatsapp.</span></i></p>
+                        <p><span style="font-weight: 400;">&nbsp;Nous sommes ravis de vous accompagner et de vous guider
+                                dans la création de votre tenue sur-mesure.</span></p>
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+                <div
+                    class="xl:col-start-[18] xl:col-end-[25] row-start-1 row-span-2 hidden w-full xl:block border-l-px border-green">
+                    <div class="image w-full h-full">
+                        <figure class="w-full h-full ">
+                            <img class="lazy opacity-0 w-full h-full backface-hidden object-cover entered loaded"
+                                width="150" height="150" alt=""
+                                data-src="https://that-original.com/wp-content/uploads/2023/02/OT-35-copie-480x320.jpg"
+                                data-srcset="
+                    https://that-original.com/wp-content/uploads/2023/02/OT-35-copie-480x320.jpg 480w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT-35-copie-768x512.jpg 768w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT-35-copie-1200x800.jpg 1200w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT-35-copie-1600x1067.jpg 1600w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT-35-copie-1920x1280.jpg 1920w,
+                " data-sizes="
+        (max-width: 1023px) 100vw,
+        50vw" data-ll-status="loaded" sizes="
+        (max-width: 1023px) 100vw,
+        50vw" srcset="
+                    https://that-original.com/wp-content/uploads/2023/02/OT-35-copie-480x320.jpg 480w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT-35-copie-768x512.jpg 768w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT-35-copie-1200x800.jpg 1200w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT-35-copie-1600x1067.jpg 1600w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT-35-copie-1920x1280.jpg 1920w,
+                " src="https://that-original.com/wp-content/uploads/2023/02/OT-35-copie-480x320.jpg">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-col-12 xl:grid-cols-24 grid-rows-[min-content_minmax(0,_1fr)] w-full border-x-[1px] border-t-[1px] last:border-b-[1px] border-green bg-beige-light step-card"
+                style="height: 733px; transform: translate(0px, 0px);">
+                <div
+                    class="col-start-3 col-end-4 xl:col-start-1 xl:col-end-6 xl:row-span-2 xl:border-r-px xl:border-green pt-30 pl-30 xl:pr-20 xl:pl-20">
+                    <span class="title-paganini step-card-index origin-top-left inline-block"
+                        style="transform: scale(3, 3);">02.</span>
+                </div>
+                <div class="w-full col-start-4 col-end-13 xl:col-start-6 xl:col-end-[18]">
+                    <h3 class="title-paganini xl:pl-[8.62%] xl:pr-[4%] pt-30 pb-20 step-card-title">De quoi avez-vous
+                        envie ? </h3>
+                </div>
+                <div class="col-start-3 col-end-13 xl:col-start-6 xl:col-end-[18] mb-20 xl:mb-0">
+                    <div class="text-animation text-expanded px-30 xl:pl-[8.62%] xl:pr-[17.24%] text-14 text-green"
+                        style="opacity: 1;">
+                        <p style="text-align: left;"><strong>Nous sommes toutes uniques. Nous sommes toutes différentes.
+                                Nous avons toutes notre propre caractère. </strong></p>
+                        <p style="text-align: left;"><span data-slate-object="text" data-key="2961"><span
+                                    style="font-weight: 400;">Découvrez nos différentes collections</span><span
+                                    style="font-weight: 400;"> de </span>vêtements sur-mesure femme<span
+                                    style="font-weight: 400;"> et les traits de caractère de chacune
+                                    d’elle</span>.</span> <span data-slate-object="text" data-key="2963">Naviguez
+                                librement entre chaque personnalité, identifiez leurs caractéristiques et dévoilez tous
+                                leurs secrets.</span></p>
+                        <p style="text-align: left;"><span data-slate-object="text" data-key="3236">Soyez artisane de
+                                votre propre beauté.</span> <span data-slate-object="text" data-key="3209">Décidez de
+                                quoi vous avez envie aujourd’hui.</span> <span data-slate-object="text"
+                                data-key="3132">Nous vous laissons le choix de qui vous voulez être.</span></p>
+                        <p style="text-align: left;"><em><span style="font-weight: 400;">Besoin d’idées ? Laissez-vous
+                                    inspirer sur notre</span> <span style="text-decoration: underline;"><a
+                                        href="https://that-original.com/shop/" target="_blank" rel="noopener">page
+                                        Inspirations</a></span>.</em><br>
+                            <em><span style="font-weight: 400;">Découvrez également </span><span
+                                    style="text-decoration: underline;"><a
+                                        href="https://that-original.com/questionnaire/" target="_blank"
+                                        rel="noopener">notre questionnaire</a></span><span style="font-weight: 400;">,
+                                    laissez-vous guider par les questions et découvrez la tenue qui est faite pour vous.
+                                </span></em>
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="xl:col-start-[18] xl:col-end-[25] row-start-1 row-span-2 hidden w-full xl:block border-l-px border-green">
+                    <div class="image w-full h-full">
+                        <figure class="w-full h-full ">
+                            <img class="lazy opacity-0 w-full h-full backface-hidden object-cover entered loaded"
+                                width="150" height="150" alt=""
+                                data-src="https://that-original.com/wp-content/uploads/2023/02/OT3-97-480x720.jpg"
+                                data-srcset="
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-97-480x720.jpg 480w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-97-768x1152.jpg 768w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-97-1200x1800.jpg 1200w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-97-1600x2400.jpg 1600w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-97-1920x2880.jpg 1920w,
+                " data-sizes="
+        (max-width: 1023px) 100vw,
+        50vw" data-ll-status="loaded" sizes="
+        (max-width: 1023px) 100vw,
+        50vw" srcset="
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-97-480x720.jpg 480w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-97-768x1152.jpg 768w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-97-1200x1800.jpg 1200w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-97-1600x2400.jpg 1600w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-97-1920x2880.jpg 1920w,
+                " src="https://that-original.com/wp-content/uploads/2023/02/OT3-97-480x720.jpg">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-col-12 xl:grid-cols-24 grid-rows-[min-content_minmax(0,_1fr)] w-full border-x-[1px] border-t-[1px] last:border-b-[1px] border-green bg-beige-light step-card"
+                style="height: 733px; transform: translate(0px, 0px);">
+                <div
+                    class="col-start-3 col-end-4 xl:col-start-1 xl:col-end-6 xl:row-span-2 xl:border-r-px xl:border-green pt-30 pl-30 xl:pr-20 xl:pl-20">
+                    <span class="title-paganini step-card-index origin-top-left inline-block"
+                        style="transform: scale(3, 3);">03.</span>
+                </div>
+                <div class="w-full col-start-4 col-end-13 xl:col-start-6 xl:col-end-[18]">
+                    <h3 class="title-paganini xl:pl-[8.62%] xl:pr-[4%] pt-30 pb-20 step-card-title">Le salon de
+                        personnalisation</h3>
+                </div>
+                <div class="col-start-3 col-end-13 xl:col-start-6 xl:col-end-[18] mb-20 xl:mb-0">
+                    <div class="text-animation text-expanded px-30 xl:pl-[8.62%] xl:pr-[17.24%] text-14 text-green"
+                        style="opacity: 1;">
+                        <p style="text-align: left;"><strong>Adaptez chaque détail à votre convenance. Les choix sont
+                                infinis. La création est la vôtre.&nbsp;</strong></p>
+                        <p><span data-slate-object="text" data-key="4760">Décidez qui vous voulez être
+                                aujourd’hui.</span> <span data-slate-object="text" data-key="4829">Choisissez votre
+                                personnalité et </span><span data-slate-object="text" data-key="4830"><span
+                                    class="id_57ed14d4-ccb9-478f-8447-19414a1a5ed3-28" data-slate-object="mark"
+                                    data-info="noeud">incarnez-la</span></span><span data-slate-object="text"
+                                data-key="4831"> dans votre création.</span> <span data-slate-object="text"
+                                data-key="4879"><span class="id_4f1470db-157c-4a1e-bcb8-eea2b0124b6a-49"
+                                    data-slate-object="mark" data-info="noeud">Adaptez</span></span><span
+                                data-slate-object="text" data-key="4880"> chaque trait de votre caractère en passant de
+                                la robe longue à la courte ou changez pour une combinaison.</span> <span
+                                data-slate-object="text" data-key="4769"><span
+                                    class="id_1e6c240f-6221-4de7-bf84-5ae46f72356c-32" data-slate-object="mark"
+                                    data-info="noeud">Ajoutez</span></span><span data-slate-object="text"
+                                data-key="4770">, supprimez les manches comme chaque détail de votre caractère.</span>
+                            <span data-slate-object="text" data-key="4772">Tous les styles sont permis.</span> <span
+                                data-slate-object="text" data-key="4774">Personne ne peut vous imposer un choix.</span>
+                            <span data-slate-object="text" data-key="4776"
+                                data-slate-fragment="JTdCJTIyb2JqZWN0JTIyJTNBJTIyZG9jdW1lbnQlMjIlMkMlMjJkYXRhJTIyJTNBJTdCJTdEJTJDJTIybm9kZXMlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJibG9jayUyMiUyQyUyMnR5cGUlMjIlM0ElMjJ6b25lJTIyJTJDJTIyZGF0YSUyMiUzQSU3QiU3RCUyQyUyMm5vZGVzJTIyJTNBJTVCJTdCJTIyb2JqZWN0JTIyJTNBJTIyYmxvY2slMjIlMkMlMjJ0eXBlJTIyJTNBJTIybGlnbmUlMjIlMkMlMjJkYXRhJTIyJTNBJTdCJTdEJTJDJTIybm9kZXMlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJibG9jayUyMiUyQyUyMnR5cGUlMjIlM0ElMjJkZWZhdWx0LWVsZW1lbnQlMjIlMkMlMjJkYXRhJTIyJTNBJTdCJTdEJTJDJTIybm9kZXMlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJ0ZXh0JTIyJTJDJTIydGV4dCUyMiUzQSUyMkQlQzMlQTljaWRleiUyMGRlJTIwcXVpJTIwdm91cyUyMHZvdWxleiUyMCVDMyVBQXRyZSUyMGF1am91cmQnaHVpLiUyMiUyQyUyMm1hcmtzJTIyJTNBJTVCJTVEJTdEJTJDJTdCJTIyb2JqZWN0JTIyJTNBJTIydGV4dCUyMiUyQyUyMnRleHQlMjIlM0ElMjIlMjAlMjIlMkMlMjJtYXJrcyUyMiUzQSU1QiU3QiUyMm9iamVjdCUyMiUzQSUyMm1hcmslMjIlMkMlMjJ0eXBlJTIyJTNBJTIyQ2FyU2VwYXJhdGV1ciUyMiUyQyUyMmRhdGElMjIlM0ElN0IlN0QlN0QlNUQlN0QlMkMlN0IlMjJvYmplY3QlMjIlM0ElMjJ0ZXh0JTIyJTJDJTIydGV4dCUyMiUzQSUyMkNob2lzaXNzZXolMjB2b3RyZSUyMHBlcnNvbm5hbGl0JUMzJUE5JTIwZXQlMjAlMjIlMkMlMjJtYXJrcyUyMiUzQSU1QiU1RCU3RCUyQyU3QiUyMm9iamVjdCUyMiUzQSUyMnRleHQlMjIlMkMlMjJ0ZXh0JTIyJTNBJTIyaW5jYXJuZXotbGElMjIlMkMlMjJtYXJrcyUyMiUzQSU1QiU3QiUyMm9iamVjdCUyMiUzQSUyMm1hcmslMjIlMkMlMjJ0eXBlJTIyJTNBJTIyY2xhc3NOYW1lJTIyJTJDJTIyZGF0YSUyMiUzQSU3QiUyMmNsYXNzTmFtZSUyMiUzQSUyMmlkXzU3ZWQxNGQ0LWNjYjktNDc4Zi04NDQ3LTE5NDE0YTFhNWVkMy0yOCUyMiU3RCU3RCUyQyU3QiUyMm9iamVjdCUyMiUzQSUyMm1hcmslMjIlMkMlMjJ0eXBlJTIyJTNBJTIyVHJhaXRWZXJ0JTIyJTJDJTIyZGF0YSUyMiUzQSU3QiU3RCU3RCU1RCU3RCUyQyU3QiUyMm9iamVjdCUyMiUzQSUyMnRleHQlMjIlMkMlMjJ0ZXh0JTIyJTNBJTIyJTIwZGFucyUyMHZvdHJlJTIwY3IlQzMlQTlhdGlvbi4lMjIlMkMlMjJtYXJrcyUyMiUzQSU1QiU1RCU3RCUyQyU3QiUyMm9iamVjdCUyMiUzQSUyMnRleHQlMjIlMkMlMjJ0ZXh0JTIyJTNBJTIyJTIwJTIyJTJDJTIybWFya3MlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJtYXJrJTIyJTJDJTIydHlwZSUyMiUzQSUyMkNhclNlcGFyYXRldXIlMjIlMkMlMjJkYXRhJTIyJTNBJTdCJTdEJTdEJTVEJTdEJTJDJTdCJTIyb2JqZWN0JTIyJTNBJTIydGV4dCUyMiUyQyUyMnRleHQlMjIlM0ElMjJBZGFwdGV6JTIyJTJDJTIybWFya3MlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJtYXJrJTIyJTJDJTIydHlwZSUyMiUzQSUyMmNsYXNzTmFtZSUyMiUyQyUyMmRhdGElMjIlM0ElN0IlMjJjbGFzc05hbWUlMjIlM0ElMjJpZF80ZjE0NzBkYi0xNTdjLTRhMWUtYmNiOC1lZWEyYjAxMjRiNmEtNDklMjIlN0QlN0QlMkMlN0IlMjJvYmplY3QlMjIlM0ElMjJtYXJrJTIyJTJDJTIydHlwZSUyMiUzQSUyMlRyYWl0VmVydCUyMiUyQyUyMmRhdGElMjIlM0ElN0IlN0QlN0QlNUQlN0QlMkMlN0IlMjJvYmplY3QlMjIlM0ElMjJ0ZXh0JTIyJTJDJTIydGV4dCUyMiUzQSUyMiUyMGNoYXF1ZSUyMHRyYWl0JTIwZGUlMjB2b3RyZSUyMGNhcmFjdCVDMyVBOHJlJTIwZW4lMjBwYXNzYW50JTIwZGUlMjBsYSUyMHJvYmUlMjBsb25ndWUlMjAlQzMlQTAlMjBsYSUyMGNvdXJ0ZSUyMG91JTIwY2hhbmdleiUyMHBvdXIlMjB1bmUlMjBjb21iaW5haXNvbi4lMjIlMkMlMjJtYXJrcyUyMiUzQSU1QiU1RCU3RCUyQyU3QiUyMm9iamVjdCUyMiUzQSUyMnRleHQlMjIlMkMlMjJ0ZXh0JTIyJTNBJTIyJTIwJTIyJTJDJTIybWFya3MlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJtYXJrJTIyJTJDJTIydHlwZSUyMiUzQSUyMkNhclNlcGFyYXRldXIlMjIlMkMlMjJkYXRhJTIyJTNBJTdCJTdEJTdEJTVEJTdEJTJDJTdCJTIyb2JqZWN0JTIyJTNBJTIydGV4dCUyMiUyQyUyMnRleHQlMjIlM0ElMjJBam91dGV6JTIyJTJDJTIybWFya3MlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJtYXJrJTIyJTJDJTIydHlwZSUyMiUzQSUyMmNsYXNzTmFtZSUyMiUyQyUyMmRhdGElMjIlM0ElN0IlMjJjbGFzc05hbWUlMjIlM0ElMjJpZF8xZTZjMjQwZi02MjIxLTRkZTctYmY4NC01YWU0NmY3MjM1NmMtMzIlMjIlN0QlN0QlMkMlN0IlMjJvYmplY3QlMjIlM0ElMjJtYXJrJTIyJTJDJTIydHlwZSUyMiUzQSUyMlRyYWl0RmluT3JhbmdlJTIyJTJDJTIyZGF0YSUyMiUzQSU3QiU3RCU3RCU1RCU3RCUyQyU3QiUyMm9iamVjdCUyMiUzQSUyMnRleHQlMjIlMkMlMjJ0ZXh0JTIyJTNBJTIyJTJDJTIwc3VwcHJpbWV6JTIwbGVzJTIwbWFuY2hlcyUyMGNvbW1lJTIwY2hhcXVlJTIwZCVDMyVBOXRhaWwlMjBkZSUyMHZvdHJlJTIwY2FyYWN0JUMzJUE4cmUuJTIyJTJDJTIybWFya3MlMjIlM0ElNUIlNUQlN0QlMkMlN0IlMjJvYmplY3QlMjIlM0ElMjJ0ZXh0JTIyJTJDJTIydGV4dCUyMiUzQSUyMiUyMCUyMiUyQyUyMm1hcmtzJTIyJTNBJTVCJTdCJTIyb2JqZWN0JTIyJTNBJTIybWFyayUyMiUyQyUyMnR5cGUlMjIlM0ElMjJDYXJTZXBhcmF0ZXVyJTIyJTJDJTIyZGF0YSUyMiUzQSU3QiU3RCU3RCU1RCU3RCUyQyU3QiUyMm9iamVjdCUyMiUzQSUyMnRleHQlMjIlMkMlMjJ0ZXh0JTIyJTNBJTIyVG91cyUyMGxlcyUyMHN0eWxlcyUyMHNvbnQlMjBwZXJtaXMuJTIyJTJDJTIybWFya3MlMjIlM0ElNUIlNUQlN0QlMkMlN0IlMjJvYmplY3QlMjIlM0ElMjJ0ZXh0JTIyJTJDJTIydGV4dCUyMiUzQSUyMiUyMCUyMiUyQyUyMm1hcmtzJTIyJTNBJTVCJTdCJTIyb2JqZWN0JTIyJTNBJTIybWFyayUyMiUyQyUyMnR5cGUlMjIlM0ElMjJDYXJTZXBhcmF0ZXVyJTIyJTJDJTIyZGF0YSUyMiUzQSU3QiU3RCU3RCU1RCU3RCUyQyU3QiUyMm9iamVjdCUyMiUzQSUyMnRleHQlMjIlMkMlMjJ0ZXh0JTIyJTNBJTIyUGVyc29ubmUlMjBuZSUyMHBldXQlMjB2b3VzJTIwaW1wb3NlciUyMHVuJTIwY2hvaXguJTIyJTJDJTIybWFya3MlMjIlM0ElNUIlNUQlN0QlMkMlN0IlMjJvYmplY3QlMjIlM0ElMjJ0ZXh0JTIyJTJDJTIydGV4dCUyMiUzQSUyMiUyMCUyMiUyQyUyMm1hcmtzJTIyJTNBJTVCJTdCJTIyb2JqZWN0JTIyJTNBJTIybWFyayUyMiUyQyUyMnR5cGUlMjIlM0ElMjJDYXJTZXBhcmF0ZXVyJTIyJTJDJTIyZGF0YSUyMiUzQSU3QiU3RCU3RCU1RCU3RCUyQyU3QiUyMm9iamVjdCUyMiUzQSUyMnRleHQlMjIlMkMlMjJ0ZXh0JTIyJTNBJTIyTGUlMjByZW5kdSUyMHNlcmElMjAlQzMlQTAlMjBjb3VwZXIlMjBsZSUyMHNvdWZmbGUuJTIyJTJDJTIybWFya3MlMjIlM0ElNUIlNUQlN0QlMkMlN0IlMjJvYmplY3QlMjIlM0ElMjJ0ZXh0JTIyJTJDJTIydGV4dCUyMiUzQSUyMiUyMCUyMiUyQyUyMm1hcmtzJTIyJTNBJTVCJTdCJTIyb2JqZWN0JTIyJTNBJTIybWFyayUyMiUyQyUyMnR5cGUlMjIlM0ElMjJGb250R3Jpc05vcm1hbGlzYXklMjIlMkMlMjJkYXRhJTIyJTNBJTdCJTdEJTdEJTVEJTdEJTVEJTdEJTVEJTdEJTVEJTdEJTVEJTdE">Le
+                                rendu sera à couper le souffle.</span></p>
+                        <p><span style="font-weight: 200;">Complétez votre tenue en naviguant entre les différents
+                                onglets pour ajouter</span><span style="font-weight: 200;">&nbsp;le tissu*, le bas et
+                                les manches (optionnel). </span></p>
+                        <p>&nbsp;</p>
+                        <p><em><span style="font-weight: 200;">* Un doute sur le tissu? <span
+                                        style="text-decoration: underline;"><a
+                                            href="https://that-original.com/echantillon/" target="_blank"
+                                            rel="noopener">Demandez un échantillon gratuit</a></span>. </span></em><span
+                                style="font-weight: 200;">Un besoin de tissu précis? <span
+                                    style="text-decoration: underline;"><a
+                                        href="https://that-original.com/contact/">Contactez-nous pour en
+                                        discuter</a></span>.</span></p>
+                    </div>
+                </div>
+                <div
+                    class="xl:col-start-[18] xl:col-end-[25] row-start-1 row-span-2 hidden w-full xl:block border-l-px border-green">
+                    <div class="image w-full h-full">
+                        <figure class="w-full h-full ">
+                            <img class="lazy opacity-0 w-full h-full backface-hidden object-cover entered loaded"
+                                width="150" height="150" alt=""
+                                data-src="https://that-original.com/wp-content/uploads/2023/02/OT3-73-480x720.jpg"
+                                data-srcset="
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-73-480x720.jpg 480w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-73-768x1152.jpg 768w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-73-1200x1800.jpg 1200w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-73-1600x2400.jpg 1600w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-73-1920x2880.jpg 1920w,
+                " data-sizes="
+        (max-width: 1023px) 100vw,
+        50vw" data-ll-status="loaded" sizes="
+        (max-width: 1023px) 100vw,
+        50vw" srcset="
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-73-480x720.jpg 480w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-73-768x1152.jpg 768w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-73-1200x1800.jpg 1200w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-73-1600x2400.jpg 1600w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-73-1920x2880.jpg 1920w,
+                " src="https://that-original.com/wp-content/uploads/2023/02/OT3-73-480x720.jpg">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-col-12 xl:grid-cols-24 grid-rows-[min-content_minmax(0,_1fr)] w-full border-x-[1px] border-t-[1px] last:border-b-[1px] border-green bg-beige-light step-card"
+                style="height: 733px; transform: translate(0px, 0px);">
+                <div
+                    class="col-start-3 col-end-4 xl:col-start-1 xl:col-end-6 xl:row-span-2 xl:border-r-px xl:border-green pt-30 pl-30 xl:pr-20 xl:pl-20">
+                    <span class="title-paganini step-card-index origin-top-left inline-block"
+                        style="transform: scale(3, 3);">04.</span>
+                </div>
+                <div class="w-full col-start-4 col-end-13 xl:col-start-6 xl:col-end-[18]">
+                    <h3 class="title-paganini xl:pl-[8.62%] xl:pr-[4%] pt-30 pb-20 step-card-title">L’essayage</h3>
+                </div>
+                <div class="col-start-3 col-end-13 xl:col-start-6 xl:col-end-[18] mb-20 xl:mb-0">
+                    <div class="text-animation text-expanded px-30 xl:pl-[8.62%] xl:pr-[17.24%] text-14 text-green"
+                        style="opacity: 1;">
+                        <p style="text-align: left;"><strong>Projetez-vous avec le mannequin, imaginez-vous avec votre
+                                création.</strong></p>
+                        <p><span style="font-weight: 200;">Essayez, changez, visualisez. Tous les changements sont
+                                instantanés. Accédez à une vue 360°: visualiser votre création et percevez les
+                                différentes longueurs de manches et bas ainsi que le rendu avec le tissu
+                                choisi.&nbsp;</span></p>
+                        <p>Positionnez-vous sur le mannequin, maintenez le clic gauche enfoncé et tournez le mannequin à
+                            votre convenance. Le clic droit enfoncé vous permet de déplacer le mannequin.</p>
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+                <div
+                    class="xl:col-start-[18] xl:col-end-[25] row-start-1 row-span-2 hidden w-full xl:block border-l-px border-green">
+                    <div class="image w-full h-full">
+                        <figure class="w-full h-full ">
+                            <img class="lazy opacity-0 w-full h-full backface-hidden object-cover entered loaded"
+                                width="150" height="150" alt=""
+                                data-src="https://that-original.com/wp-content/uploads/2023/02/OT1-131-copie-480x720.jpg"
+                                data-srcset="
+                    https://that-original.com/wp-content/uploads/2023/02/OT1-131-copie-480x720.jpg 480w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT1-131-copie-768x1152.jpg 768w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT1-131-copie-1200x1800.jpg 1200w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT1-131-copie-1600x2400.jpg 1600w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT1-131-copie-1920x2880.jpg 1920w,
+                " data-sizes="
+        (max-width: 1023px) 100vw,
+        50vw" data-ll-status="loaded" sizes="
+        (max-width: 1023px) 100vw,
+        50vw" srcset="
+                    https://that-original.com/wp-content/uploads/2023/02/OT1-131-copie-480x720.jpg 480w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT1-131-copie-768x1152.jpg 768w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT1-131-copie-1200x1800.jpg 1200w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT1-131-copie-1600x2400.jpg 1600w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT1-131-copie-1920x2880.jpg 1920w,
+                " src="https://that-original.com/wp-content/uploads/2023/02/OT1-131-copie-480x720.jpg">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-col-12 xl:grid-cols-24 grid-rows-[min-content_minmax(0,_1fr)] w-full border-x-[1px] border-t-[1px] last:border-b-[1px] border-green bg-beige-light step-card"
+                style="height: 733px; transform: translate(0px, 0px);">
+                <div
+                    class="col-start-3 col-end-4 xl:col-start-1 xl:col-end-6 xl:row-span-2 xl:border-r-px xl:border-green pt-30 pl-30 xl:pr-20 xl:pl-20">
+                    <span class="title-paganini step-card-index origin-top-left inline-block"
+                        style="transform: scale(3, 3);">05.</span>
+                </div>
+                <div class="w-full col-start-4 col-end-13 xl:col-start-6 xl:col-end-[18]">
+                    <h3 class="title-paganini xl:pl-[8.62%] xl:pr-[4%] pt-30 pb-20 step-card-title">Votre pièce unique
+                    </h3>
+                </div>
+                <div class="col-start-3 col-end-13 xl:col-start-6 xl:col-end-[18] mb-20 xl:mb-0">
+                    <div class="text-animation text-expanded px-30 xl:pl-[8.62%] xl:pr-[17.24%] text-14 text-green"
+                        style="opacity: 1;">
+                        <p style="text-align: left;"><strong>Choisissez, créez, accomplissez-vous. Nous rendons tout
+                                possible.</strong></p>
+                        <p><span style="font-weight: 200;">Validez votre achat et nous nous occupons du reste.
+                            </span><span style="font-weight: 200;">Une confirmation de commande vous sera envoyée une
+                                fois la commande validée.&nbsp;</span></p>
+                        <p><span style="font-weight: 200;">Votre pièce sera confectionnée dans notre atelier à <span
+                                    style="text-decoration: underline;"><a href="https://that-original.com/a-propos/"
+                                        target="_blank" rel="noopener">Paris</a></span>. </span><span
+                                style="font-weight: 200;">Le délai est d’environ 4 semaines</span><span
+                                style="font-weight: 200;">. </span></p>
+                        <p><span style="font-weight: 200;">Une fois, votre commande prête, nous vous en informerons par
+                                mail avec un numéro de suivi.&nbsp;</span></p>
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+                <div
+                    class="xl:col-start-[18] xl:col-end-[25] row-start-1 row-span-2 hidden w-full xl:block border-l-px border-green">
+                    <div class="image w-full h-full">
+                        <figure class="w-full h-full ">
+                            <img class="lazy opacity-0 w-full h-full backface-hidden object-cover entered loaded"
+                                width="150" height="150" alt=""
+                                data-src="https://that-original.com/wp-content/uploads/2023/02/OT3-226-scaled-e1675375647109-480x583.jpg"
+                                data-srcset="
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-226-scaled-e1675375647109-480x583.jpg 480w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-226-scaled-e1675375647109-768x933.jpg 768w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-226-scaled-e1675375647109-1200x1459.jpg 1200w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-226-scaled-e1675375647109-1600x1945.jpg 1600w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-226-1920x2880.jpg 1920w,
+                " data-sizes="
+        (max-width: 1023px) 100vw,
+        50vw" data-ll-status="loaded" sizes="
+        (max-width: 1023px) 100vw,
+        50vw" srcset="
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-226-scaled-e1675375647109-480x583.jpg 480w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-226-scaled-e1675375647109-768x933.jpg 768w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-226-scaled-e1675375647109-1200x1459.jpg 1200w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-226-scaled-e1675375647109-1600x1945.jpg 1600w,
+                    https://that-original.com/wp-content/uploads/2023/02/OT3-226-1920x2880.jpg 1920w,
+                " src="https://that-original.com/wp-content/uploads/2023/02/OT3-226-scaled-e1675375647109-480x583.jpg">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+
+
+
+
+        $(function () {
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            
+
+
+
+
+        });
+
+    </script>
+</body>
+
+</html>

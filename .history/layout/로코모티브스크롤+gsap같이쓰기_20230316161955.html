@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/gsap.js"></script>
+    <script src="../assets/js/gsap_scroll_trigger.js"></script>    
+    <!-- <script src="../assets/js/gsap_scroll_smoother.js"></script>     -->
+    <title>로코모티브스크롤</title>
+</head>
+<style>
+    .top1,
+    .top2,
+    .top3 {
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .item1 {
+        position: relative;
+    }
+</style>
+<body>
+    
+
+    <div class="smooth-scroll">
+        <div class="top1 smooth-scroll-content">
+            <h1>Hey</h1>
+            <p>👋</p>
+        </div>
+        <div class="top2 smooth-scroll-content">
+            <h2 class="item1">What's up?</h2>
+            <p class="item2">😬</p>
+        </div>
+        <div class="top3 smooth-scroll-content">
+            <h2 class="item3">what!!!!!!!!</h2>
+            <p class="item4">😬</p>
+        </div>
+    </div>
+    
+
+    <script>
+        $(function() {                
+
+
+
+            gsap.registerPlugin(ScrollTrigger);
+            // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+            // let smoother = ScrollSmoother.create({
+            //     wrapper: ".smooth-scroll",
+            //     content: ".smooth-scroll-content",
+            //     smooth: 1,
+            //     normalizeScroll: true
+            // });
+
+            const tl1 = gsap.timeline({                
+                scrollTrigger: {
+                    trigger: '.item1',
+                    start: "top center",   
+                    end: "+200px center",
+                    scrub: true,
+                    markers: true,
+                },
+            });
+
+            const tl2 = gsap.timeline({                
+                scrollTrigger: {
+                    trigger: '.item3',
+                    start: "top center",     
+                    end: "+200px center",
+                    scrub: true,
+                    markers: true,
+                },
+            });
+
+            tl1.to('.item1',{
+                x: 100,                
+                y: 100,
+                // rotation: 27
+            });
+
+
+            tl2.to('.item3',{
+                x: -100,                
+                y: -100,
+                // rotation: 27
+            });
+                        
+            
+            
+        });
+    </script>
+</body>
+</html>

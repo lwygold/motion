@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        overflow:hidden;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    button {
+        font-size: 20px;
+        padding: 10px 30px;
+        cursor: pointer;
+    }
+    .arrowWarp {
+        margin: 30px;
+    }
+    .arrowWarp img {
+        transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+        width: 50px;
+    }
+</style>
+<script>
+    window.onload = function() {
+        var resetBtn = document.querySelector(".resetBtn");
+        var startBtn = document.querySelector(".startBtn");
+
+        var h1 = document.getElementsByTagName('h1')[0];
+
+        startBtn.addEventListener("click", function() {
+            rotateNum = Math.round(Math.random()*360);
+            alert(rotateNum);
+            h1.innerHTML = rotateNum + "deg";
+        });
+    }
+</script>
+<body>
+    <button type="button" class="resetBtn">리셋</button>    
+    <button type="button" class="startBtn">회전</button>    
+    <h1>0deg</h1>   
+    <div class="arrowWarp">
+        <img src="./images/arrow-up.svg" alt=""  />
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/locomotive-scroll.css">    
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/gsap.js"></script>
+    <script src="../assets/js/gsap_scroll_trigger.js"></script>
+    <script src="./js/locomotive-scroll.js"></script>
+    <title>로코모티브스크롤</title>
+</head>
+<style>
+    .top1,
+    .top2,
+    .top3 {
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .item1 {
+        position: relative;
+    }
+</style>
+<body>
+    
+
+    <div data-scroll-container>
+        <div class="top1" data-scroll-section>
+            <h1 data-scroll>Hey</h1>
+            <p data-scroll>👋</p>
+        </div>
+        <div class="top2" data-scroll-section>
+            <h2 data-scroll  class="item1">What's up?</h2>
+            <p data-scroll class="item2">😬</p>
+        </div>
+        <div class="top3" data-scroll-section>
+            <h2 data-scroll class="item3">what!!!!!!!!</h2>
+            <p data-scroll class="item4">😬</p>
+        </div>
+    </div>
+    
+
+    <script>
+        $(function() {    
+
+            const scroll = new LocomotiveScroll({
+                el: document.querySelector('[data-scroll-container]'),
+                smooth: true
+            });
+
+
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            const tl1 = gsap.timeline({                
+                scrollTrigger: {
+                    trigger: '.top2',
+                    start: "top top",                    
+                    scrub: true,
+                    markers: true,
+                },
+            });
+
+            tl1.to('.item1',{
+                x: 100,                
+            });
+                        
+            
+            
+        });
+    </script>
+</body>
+</html>

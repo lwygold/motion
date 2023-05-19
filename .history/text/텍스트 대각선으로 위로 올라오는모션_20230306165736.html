@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>        
+    <script src="../assets/js/gsap.js"></script>
+    <script src="../assets/js/gsap_scroll_trigger.js"></script>
+    <script src="../assets/js/green.js"></script>    
+
+    <style>
+        h1 {
+            padding-top: 160px;
+            font-size: 12vw;
+            line-height: 85%;
+            letter-spacing: -0.04em;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #6055e7;
+        }
+
+        h1 div {
+            position: relative;
+        }
+        h1 div:nth-of-type(1) {
+            margin-left: 2vw;
+        }
+        h1 div:nth-of-type(2) {
+            margin-left: 20vw;
+        }
+        h1 div:nth-of-type(3) {
+            margin-left: 12vw;
+        }
+        h1 div:nth-of-type(4) {
+            margin-left: 42vw;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>
+            <div class="panel">BIENVENUE</div>
+            <div class="panel">DANS MON</div>
+            <div class="panel">UNIVERS</div>
+            <div class="panel">COLORÉ</div>
+        </h1>
+    </div>
+
+
+
+    <script>
+
+        $(function () {
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            let panels = gsap.utils.toArray(".panel");
+                
+
+            let tl1 = gsap.timeline({                
+                scrollTrigger: {
+                    trigger: panels,
+                    start: "center center",
+                    endTrigger: panels,               
+                    scrub: true,
+                    markers: true,
+                }
+            });
+
+            
+            
+            
+            panels.forEach((panel, i, p) => {                 
+               
+                                                        
+            });
+            
+            
+            
+
+        });
+    </script>
+    
+</body>
+</html>

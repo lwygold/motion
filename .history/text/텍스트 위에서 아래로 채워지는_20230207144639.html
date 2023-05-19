@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .sitemap__slogan {
+            font-size: 9vw;
+        }
+        .sitemap__slogan span {
+            overflow: hidden;
+            display: block;
+            position: relative;
+            font-size: 9vw;
+            font-weight: bold;
+            line-height: 1.2;
+            -webkit-text-stroke: 1px #000;
+            color: transparent;
+        }
+
+        .sitemap__slogan span:nth-child(1):before {
+            content: 'DIGITAL';
+            display: block;
+            font-size: 9vw;
+            font-weight: bold;
+            line-height: 1.2;
+            transition-delay: 0.2s;
+        }
+
+        .sitemap__slogan span:nth-child(2):before {
+            content: 'TRANSFORMATION';
+            display: block;
+            font-size: 9vw;
+            font-weight: bold;
+            line-height: 1.2;
+            transition-delay: 0.4s;
+        }
+
+        .sitemap__slogan span:nth-child(3):before {
+            content: 'LEADER';
+            display: block;
+            font-size: 9vw;
+            font-weight: bold;
+            line-height: 1.2;
+            transition-delay: 0.6s;
+        }
+
+        .active.sitemap__slogan span:before {
+            height: 100%;
+            color: #000;
+        }
+
+        .sitemap__slogan span:before {
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 0;
+            transition: height 0.3s ease-out;
+            color: #000;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <p class="sitemap__slogan">
+        <span>Digital</span>
+        <span>Transformation</span>
+        <span>leader</span>
+    </p>
+
+</body>
+</html>

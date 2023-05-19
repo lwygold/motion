@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, target-densitydpi=medium-dpi" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="x-rim-auto-match" content="none" />
+  <link rel="shortcut icon" href="./images/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="./css/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./css/common.css" />
+  <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  <link rel="stylesheet" type="text/css" href="./css/sub.css" />
+  <title>테스트</title>
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/jquery-ui.min.js"></script>
+  <script src="../assets/js/slick.min.js"></script>
+  <script src="../assets/js/gsap.js"></script>
+  <script src="../assets/js/gsap_scroll_trigger.js"></script>
+  <script src="../assets/js/green.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/sub.js"></script>
+</head>
+
+<style>
+  section {
+    width: 100vw;
+    height: 100vh;
+  }  
+
+  section ul {
+    width: 400vw;
+    display: flex;
+ }
+
+  section ul li {
+    width: 100vw;
+    height: 100vh;
+    max-width: 1920px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section ul li:nth-child(1) {
+    background: red;
+  }
+  section ul li:nth-child(2) {
+    background: rgb(0, 208, 255);
+  }
+  section ul li:nth-child(3) {
+    background: rgb(255, 0, 217);
+  }
+  section ul li:nth-child(4) {
+    background: rgb(212, 255, 0);
+  }
+</style>
+
+<body>
+        
+    <section class="s1">
+        <ul>
+            <li class="s1-1">
+              <span class="text1" style="font-size:20px">A</span>
+            </li>
+            <li class="s1-2">
+              <span class="text2" style="font-size:20px">B</span>
+            </li>
+            <li class="s1-3">
+              <span class="text3" style="font-size:20px">C</span>
+            </li>
+            <li class="s1-4">
+              <span class="text4" style="font-size:20px">D</span>
+            </li>
+        </ul>
+    </section>    
+
+
+  <script>    
+
+    $(function () {      
+      gsap.registerPlugin(ScrollTrigger);
+
+      
+      
+      
+
+    });
+    
+  </script>
+</body>
+
+</html>

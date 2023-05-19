@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: hsl(0, 0%, 12%);
+        color: hsl(0, 0%, 100%);
+        font-family: "Poppins", sans-serif;
+        overflow-x: hidden;
+    }
+
+    .section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .image-box {
+        height: 800px;
+        overflow: hidden;
+    }
+
+    .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .content-box {
+        padding-inline: 5em;
+    }
+
+    .title {
+        font-size: 4em;
+        max-width: max-content;
+        margin-block-end: 0.25em;
+    }
+
+    .text {
+        opacity: 0.6;
+        line-height: 2.25;
+    }
+
+    [data-reveal="left"] {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    [data-reveal="left"].revealed {
+        animation: reveal-left 1.2s cubic-bezier(0.17, 0.97, 0.38, 1) forwards 300ms;
+    }
+
+    @keyframes reveal-left {
+        0% {
+            clip-path: inset(0 100% 0 0);
+        }
+
+        100% {
+            clip-path: inset(0 0 0 0);
+        }
+    }
+
+    [data-reveal="right"] {
+        clip-path: inset(0 0 0 100%);
+    }
+
+    [data-reveal="right"].revealed {
+        animation: reveal-right 1.2s cubic-bezier(0.17, 0.97, 0.38, 1) forwards 300ms;
+    }
+
+    @keyframes reveal-right {
+        0% {
+            clip-path: inset(0 0 0 100%);
+            _
+        }
+
+        100% {
+            clip-path: inset(0 0 0 0);
+        }
+    }
+
+    .image-box .img {
+        transform: scale(1.5);
+        transition: 1.2s cubic-bezier(0.17, 0.97, 0.38, 1);
+    }
+
+    .image-box.revealed .img {
+        transform: scale(1.5);
+    }
+
+    @media only screen and (max-width: 768px) {
+        .section {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 3em;
+        }
+
+        .content-box {
+            padding: 2em;
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .title {
+            font-size: 2em;
+        }
+
+        .text {
+            font-size: 0.8em;
+        }
+    }
+</style>
+
+<body>
+    <section class="section">
+        <div class="image-box" data-reveal="left">
+            <img src="https://img.freepik.com/premium-photo/turkish-baklava-dessert_127657-21789.jpg?w=2000" alt=""
+                class="img">
+        </div>
+        <div class="content-box">
+            <h2 class="title" data-reveal="left">
+                Baklava
+            </h2>
+            <p class="text" data-reveal="left">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laborum iste doloremque ab facere unde alias
+                sit commodi accusamus? Eius ut molestiae nemo perspiciatis, pariatur numquam accusamus voluptatem libero
+                sint.
+            </p>
+        </div>
+        <div class="content-box">
+            <h2 class="title" data-reveal="left">
+                Turkish coffee
+            </h2>
+            <p class="text" data-reveal="left">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laborum iste doloremque ab facere unde alias
+                sit commodi accusamus? Eius ut molestiae nemo perspiciatis, pariatur numquam accusamus voluptatem libero
+                sint.
+            </p>
+        </div>
+        <div class="image-box" data-reveal="left">
+            <img src="https://wallpapercave.com/wp/wp4318209.jpg" alt="" class="img">
+        </div>
+        <div class="image-box" data-reveal="left">
+            <img src="https://i5.walmartimages.com/asr/521f0e9a-eca8-4c26-8913-f992628465d3.aeb4f3035a5ffa976394f0bb9f6afefa.jpeg"
+                alt="" class="img">
+        </div>
+        <div class="content-box">
+            <h2 class="title" data-reveal="left">
+                Tea
+            </h2>
+            <p class="text" data-reveal="left">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laborum iste doloremque ab facere unde alias
+                sit commodi accusamus? Eius ut molestiae nemo perspiciatis, pariatur numquam accusamus voluptatem libero
+                sint.
+            </p>
+        </div>
+        <div class="content-box">
+            <h2 class="title" data-reveal="left">
+                Lokum
+            </h2>
+            <p class="text" data-reveal="left">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laborum iste doloremque ab facere unde alias
+                sit commodi accusamus? Eius ut molestiae nemo perspiciatis, pariatur numquam accusamus voluptatem libero
+                sint.
+            </p>
+        </div>
+        <div class="image-box" data-reveal="left">
+            <img src="https://i.pinimg.com/originals/7a/62/1f/7a621fabe6f0b95a4aedea6fb7347888.jpg" alt="" class="img">
+        </div>
+    </section>
+
+</body>
+
+</html>
