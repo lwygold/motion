@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+<style>
+    body {
+        background: #000;
+    }
+
+    .sub__top__menu {
+        position: relative;
+        z-index: 12;
+        transition: all 0.5s ease;
+        opacity: 1;
+    }
+
+    .sub__top__menu.index {
+        z-index: 1;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+
+    .sub__top__menu>ul {
+        position: relative;
+        z-index: 2;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sub__top__menu>ul li {
+        width: 190px;
+        height: 137px;
+        border-top: 3px solid rgba(255, 255, 255, 0.2);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(7.5px);
+    }
+
+    .sub__top__menu>ul li.active {
+        background: rgba(224, 40, 0, 0.9);
+        border-top: 3px solid #FFFFFF;
+        border-right: 0px solid rgba(255, 255, 255, 0.2);
+    }
+
+
+    .sub__top__menu>ul li.active span {
+        opacity: 1;
+    }
+
+    .sub__top__menu>ul li:hover span {
+        opacity: 1;
+    }
+
+    .sub__top__menu li:hover a>div {
+        opacity: 1;
+    }
+
+    .sub__top__menu>ul li a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .sub__top__menu>ul li a span {
+        position: absolute;
+        bottom: 15px;
+        display: block;
+        font-family: 'Pretendard';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+    }
+
+    .sub__top__menu>ul li a>div {
+        width: 100%;
+        height: 100%;
+        background: url(../assets/images/gnb_icon1.png) no-repeat;
+        opacity: 0.5;
+        transition: opacity 0.3s ease, background-position 0.5s ease;
+    }
+
+    .sub__top__menu>ul li.active a {
+        cursor: auto;
+    }
+
+    .sub__top__menu>ul li.active a>div {
+        opacity: 1;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_1 li:nth-child(1) a>div {
+        background-position-x: 0;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_1 li:nth-child(2) a>div {
+        background-position-x: -190px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_1 li:nth-child(3) a>div {
+        background-position-x: -380px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_1 li:nth-child(4) a>div {
+        background-position-x: -570px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_1 li:nth-child(5) a>div {
+        background-position-x: -760px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_2 li:nth-child(1) a>div {
+        background-position-x: 0;
+        background-position-y: -145px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_2 li:nth-child(2) a>div {
+        background-position-x: -190px;
+        background-position-y: -145px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_2 li:nth-child(3) a>div {
+        background-position-x: -380px;
+        background-position-y: -145px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_2 li:nth-child(4) a>div {
+        background-position-x: -380px;
+        background-position-y: -280px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_3 li:nth-child(1) a>div {
+        background-position-x: -190px;
+        background-position-y: -280px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_3 li:nth-child(2) a>div {
+        background-position-x: 0;
+        background-position-y: -280px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_3 li:nth-child(3) a>div {
+        background-position-x: -380px;
+        background-position-y: -280px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_4 li:nth-child(1) a>div {
+        background-position-x: 0;
+        background-position-y: -425px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_4 li:nth-child(2) a>div {
+        background-position-x: -190px;
+        background-position-y: -425px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_4 li:nth-child(3) a>div {
+        background-position-x: -380px;
+        background-position-y: -425px;
+    }
+
+
+    .sub__top__menu>ul.sub__top__menu_1 li:nth-child(1):hover a>div {
+        background-position-y: -5px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_1 li:nth-child(2):hover a>div {
+        background-position-y: -5px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_1 li:nth-child(3):hover a>div {
+        background-position-y: -5px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_1 li:nth-child(4):hover a>div {
+        background-position-y: -5px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_1 li:nth-child(5):hover a>div {
+        background-position-y: -5px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_2 li:nth-child(1):hover a>div {
+        background-position-y: -150px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_2 li:nth-child(2):hover a>div {
+        background-position-y: -150px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_2 li:nth-child(3):hover a>div {
+        background-position-y: -150px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_2 li:nth-child(4):hover a>div {
+        background-position-y: -285px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_3 li:nth-child(1):hover a>div {
+
+        background-position-y: -285px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_3 li:nth-child(2):hover a>div {
+
+        background-position-y: -285px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_3 li:nth-child(3):hover a>div {
+
+        background-position-y: -285px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_4 li:nth-child(1):hover a>div {
+
+        background-position-y: -430px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_4 li:nth-child(2):hover a>div {
+
+        background-position-y: -430px;
+    }
+
+    .sub__top__menu>ul.sub__top__menu_4 li:nth-child(3):hover a>div {
+        background-position-y: -430px;
+    }
+
+    .js_select_wrap {
+        display: none;
+    }
+
+
+    @media only screen and (max-width: 1024px) {
+        .sub__top__menu>ul {
+            display: none;
+        }
+
+        .js_select_wrap {
+            display: block;
+            height: 50px;
+            margin-top: 20px;
+            max-width: 350px;
+            margin: 0 auto;
+            margin-top: 15px;
+            position: absolute;
+            width: 100%;
+            margin: 0 auto;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 148px;
+        }
+
+        .js_select_wrap .js_select_v2 {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            max-width: 350px;
+            font-weight: 300;
+            color: #fff;
+            font-size: 20px;
+            z-index: 1;
+            line-height: 50px;
+            text-align: center;
+            margin: 0 auto;
+            border-top: 1px solid #fff;
+            left: 0;
+            right: 0;
+            background: rgba(224, 40, 0, 0.9);
+            background-position: 95% center;
+            background-size: 17px;
+            background: rgba(224, 40, 0, 0.9) url(../assets/images/arrow_down.svg) calc(100% - 15px) center no-repeat;
+            background-repeat: no-repeat;
+        }
+
+        .js_select {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            left: 0;
+            right: 0;
+            background: #ec5707 url(../assets/images/arrow_down.svg) calc(100% - 15px) center no-repeat;
+            color: #fff;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 300;
+            box-sizing: border-box;
+            letter-spacing: 0.05em;
+            margin: 0 auto;
+            text-align-last: center;
+            -ms-text-align-last: center;
+            -moz-text-align-last: center;
+            border-radius: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            outline: none;
+            opacity: 0;
+            pointer-events: none
+        }
+
+        .js_select+.select_custom {
+            position: absolute;
+            width: 100%;
+            z-index: 2;
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
+            background: rgba(224, 40, 0, 0.9);
+        }
+
+        .js_select+.select_custom a {
+            color: #fff;
+            display: block;
+            line-height: 3;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .js_select+.select_custom a:hover {
+            color: #222;
+            background: #fff;
+        }
+
+        .js_select option {
+            text-align: center;
+            background: #fff;
+            color: #000;
+        }
+
+        .sub__top__menu>ul {
+            display: none;
+        }
+
+        .js_select_wrap {
+            display: block;
+            height: 50px;
+            margin-top: 20px;
+            max-width: 350px;
+            margin: 0 auto;
+            margin-top: 15px;
+            position: absolute;
+            width: 100%;
+            margin: 0 auto;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 148px;
+        }
+
+        .hide {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <div class="sub__top__menu">
+        <ul class="sub__top__menu_1">
+            <li class="active">
+                <a href="/clk2/company/greeting/">
+                    <div></div>
+                    <span>인사말</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="/clk2/company/vision/">
+                    <div></div>
+                    <span>비전</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="/clk2/company/organization/">
+                    <div></div>
+                    <span>조직구성</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="/clk2/company/ci/">
+                    <div></div>
+                    <span>CI소개</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="/clk2/company/location/">
+                    <div></div>
+                    <span>오시는길</span>
+                </a>
+            </li>
+        </ul>
+        <div class="js_select_wrap">
+            <label class="js_select_v2">인사말</label>
+            <select class="js_select" onchange="if(this.value) location.href=this.value">
+                <option selected="" value="/clk2/company/greeting">인사말</option>
+                <option value="/clk2/company/vision">비전</option>
+                <option value="/clk2/company/organization">조직구성</option>
+                <option value="/clk2/company/ci">CI소개</option>
+                <option value="/clk2/company/location">오시는길</option>
+            </select>            
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {            
+            select_custom();
+        });
+
+        const select_custom = () => {
+
+            let c = "<div class='select_custom hide'>";
+            $('.js_select_wrap > select option').each(function () {
+                let l = $(this).val();
+                let t = $(this).text();
+                if (t != $('.js_select_wrap .js_select_v2').text()) {
+                    c += "<a href='" + l + "'>" + t + "</a>";
+                }
+            })
+            c += "</div>";
+            $('.js_select_wrap').append(c);
+            $('.js_select_wrap .js_select_v2').on("click", function (e) {
+                $('.js_select_wrap .select_custom').toggleClass("hide");
+            })
+        }
+
+        const sub_init = () => {
+            // let $ul = $('header .gnb > div > div.active ul').clone();
+            // $('.sub__top__menu').append($ul);
+            $('.sub__top').addClass('init');
+        }
+
+    </script>
+</body>
+
+</html>
